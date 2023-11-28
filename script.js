@@ -1,4 +1,6 @@
 let timer;
+let originalMinutes = 0;
+let originalSeconds = 0;
 let minutesInput = document.getElementById("minutes");
 let secondsInput = document.getElementById("seconds");
 let timerDisplay = document.getElementById("timer");
@@ -13,6 +15,9 @@ function startTimer() {
     alert("Invalid input! Please enter valid values.");
     return;
   }
+
+  originalMinutes = minutes;
+  originalSeconds = seconds;
 
   let totalSeconds = minutes * 60 + seconds;
 
@@ -32,6 +37,13 @@ function startTimer() {
 
 function stopTimer() {
   clearInterval(timer);
+}
+
+function resetTimer() {
+  clearInterval(timer);
+  timerDisplay.textContent = "00:00";
+  minutesInput.value = originalMinutes;
+  secondsInput.value = originalSeconds;
 }
 
 function padZero(number) {

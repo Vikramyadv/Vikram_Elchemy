@@ -1,4 +1,3 @@
-# Vikram_Elchemy
 # Simple Timer Web App  Overview:
 The Simple Timer Web App is a straightforward and user-friendly application designed to help users track time intervals easily. 
 The app allows users to input desired minutes and seconds, starting a countdown timer from the specified time to 00:00. 
